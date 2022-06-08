@@ -18,14 +18,14 @@
     </div>
     <div class="wrapper">
       <div class="left">
-        <div class="bill-wrapper">
+        <div class="form-field">
           <label for="bill">Bill</label>
           <div class="bill-input">
-            <span><img src="images/icon-dollar.svg" alt=""></span>
-            <input type="number" placeholder="0">
+            <span>$</span>
+            <input type="text" placeholder="0">
           </div>
         </div>
-        <div class="tip-wrapper">
+        <div class="form-field">
           <label for="tip">Select Tip %</label>
           <div class="tip-options">
             <input type="button" value="5%" id="five-percent">
@@ -36,32 +36,32 @@
             <input type="text" placeholder="Custom" id="custom">
           </div>
         </div>
-        <div class="people-wrapper">
+        <div class="form-field">
           <label for="people">No of People</label>
           <div class="people-input">
-            <span><img src="images/icon-person.svg" alt=""></span>
-            <input type="number" placeholder="0">
+            <span>$</span>
+            <input type="text" placeholder="0">
           </div>
         </div>
       </div>
       <div class="right">
         <div class="right-wrap">
           <div class="tip-calc">
-            <div class="tip-per-person">
-              <span>Tip amount</span>
-              <span>/ person</span>
+            <div class="per-person">
+              <h4>Tip amount</h4>
+              <p>/ person</p>
             </div>
-            <div class="tip-amount-total">
-              <input type="text" name="tip-amount" id="tip-amount" value="$0.00">
+            <div class="amount-total">
+              <h1 id="total-amount">$0.00</h1>
             </div>
           </div>
           <div class="total">
-            <div class="total-per-person">
-              <span>Total</span>
-              <span>/ person</span>
+            <div class="per-person">
+              <h4>Total</h4>
+              <p>/ person</p>
             </div>
             <div class="amount-total">
-              <input type="text" name="total-amount" id="total-amount" value="$0.00">
+              <h1 id="total-amount">$0.00</h1>
             </div>
           </div>
           <div class="reset">

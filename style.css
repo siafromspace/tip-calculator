@@ -1,0 +1,171 @@
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.4px;
+    background-color: var(--lightGrayishCyan);
+    height: 100vh;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    color: var(--veryDarkCyan);
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.wrapper {
+    width: 690px;
+    background-color: white;
+    display: flex;
+    padding: 30px;
+    border-radius: 20px;
+    gap: 25px;
+}
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.left .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-field label {
+    color: var(--darkGrayishCyan);
+}
+.form-field .bill-input, 
+.form-field .people-input {
+    background-color: var(--veryLightGrayishCyan);
+    border-radius: 5px;
+    padding-left: 3px;
+}
+.form-field .bill-input span, 
+.form-field .people-input span {
+    color: var(--grayishCyan);
+}
+.form-field .bill-input input[type="text"], 
+.form-field .people-input input[type="text"] {
+    outline: none;
+    border: none;
+    background-color: var(--veryLightGrayishCyan);
+    padding: 10px;
+    text-align: right;
+    width: 90%;
+    color: var(--veryDarkCyan);
+    font-weight: 900;
+}
+::placeholder {
+    color: var(--grayishCyan);
+}
+.form-field .tip-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+.form-field .tip-options input {
+    padding: 12px 10px;
+    background-color: var(--veryDarkCyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+}
+.form-field .tip-options input:hover {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+.form-field .tip-options input[type="text"] {
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--darkGrayishCyan);
+    width: 84px;
+}
+.form-field .tip-options input[type="text"]:focus {
+    outline-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+}
+.right {
+    width: 50%;
+}
+.right .right-wrap {
+    background-color: var(--veryDarkCyan);
+    padding: 20px;
+    border-radius: 10px;
+}
+.right-wrap .tip-calc, .right-wrap .total {
+    display: flex;
+    justify-content: space-between;
+}
+.per-person h4 {
+    color: white;
+    line-height: 0;
+}
+.per-person p {
+    color: var(--darkGrayishCyan);
+    line-height: 0;
+}
+.amount-total {
+    color: var(--strongCyan);
+}
+.right-wrap .reset {
+    width: 100%;
+    margin-top: 60px;
+}
+.reset input {
+    width: 100%;
+    background-color: var(--strongCyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--veryDarkCyan);
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .heading {
+        margin: auto;
+    }
+    .wrapper {
+        flex-direction: column;
+        padding: 30px;
+        width: 100%;
+        gap: 40px;
+        margin: auto;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+    .form-field .tip-options {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .form-field .tip-options input[type="text"] {
+        width: 174px;
+    }
+    .right-wrap .reset {
+        margin-top: 20px;
+    }
+}
