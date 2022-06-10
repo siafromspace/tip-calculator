@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
     letter-spacing: 0.4px;
     background-color: var(--lightGrayishCyan);
     height: 100vh;
@@ -60,6 +61,7 @@ body {
 .form-field .bill-input span, 
 .form-field .people-input span {
     color: var(--grayishCyan);
+    font-size: 1.2rem;
 }
 .form-field .bill-input input[type="text"], 
 .form-field .people-input input[type="text"] {
@@ -68,7 +70,7 @@ body {
     background-color: var(--veryLightGrayishCyan);
     padding: 10px;
     text-align: right;
-    width: 90%;
+    width: 85%;
     color: var(--veryDarkCyan);
     font-weight: 900;
 }
@@ -82,13 +84,18 @@ body {
     gap: 10px;
 }
 .form-field .tip-options input {
-    padding: 12px 10px;
+    font-family: 'Space Mono', monospace;
+    padding: 10px 10px;
     background-color: var(--veryDarkCyan);
     border: none;
     border-radius: 5px;
     color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
 }
-.form-field .tip-options input:hover {
+.form-field .tip-options input:hover, 
+.form-field .tip-options input:focus {
     background-color: var(--strongCyan);
     color: var(--veryDarkCyan);
 }
@@ -96,11 +103,23 @@ body {
     background-color: var(--veryLightGrayishCyan);
     color: var(--darkGrayishCyan);
     width: 84px;
+    text-align: center;
+    cursor: default;
 }
 .form-field .tip-options input[type="text"]:focus {
     outline-color: var(--strongCyan);
     color: var(--veryDarkCyan);
     font-weight: 700;
+}
+.people-field {
+    position: relative;
+}
+#error-msg {
+    color: rgb(252, 125, 125);
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: -20%;
 }
 .right {
     width: 50%;
@@ -131,7 +150,7 @@ body {
 }
 .reset input {
     width: 100%;
-    background-color: var(--strongCyan);
+    background-color: hsl(183, 64%, 25%);
     border: none;
     border-radius: 5px;
     color: var(--veryDarkCyan);
@@ -141,7 +160,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .heading {
         margin: auto;
     }
